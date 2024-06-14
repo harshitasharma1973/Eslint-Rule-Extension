@@ -1,0 +1,54 @@
+{
+  "name": "Eslint-ITT",
+  "displayName": "eslint-itt",
+  "description": "custom rule",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:vue",
+    "workspaceContains:**/*.{js,ts,vue,jsx}"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "itt-eslint-ts.analyzeCode",
+        "title": "Analyze Code"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.10",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^18.19.34",
+    "@types/object-hash": "^3.0.6",
+    "@types/vscode": "^1.90.0",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "object-hash": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harshitasharma1973/eslint-rule"
+  }
+}
